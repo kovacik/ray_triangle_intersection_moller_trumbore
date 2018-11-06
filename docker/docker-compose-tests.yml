@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  triangle_tests:
+    volumes:
+      - ./tests:/tests
+      - ./include:/include
+    build:
+      context: images/google_test
+    working_dir: /tests
+    command: make run
